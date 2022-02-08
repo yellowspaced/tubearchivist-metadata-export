@@ -7,4 +7,4 @@ My use case is to download youtube channels for my kids to watch via Emby. I am 
 Thank you to [bbilly1](https://github.com/bbilly1) for all the great work on TubeArchivist. 
 
 Usage:
-configure your path and server and run. it will scan the path for files, pull the youtubeid out and search elastic for the metadate and write it a file matching the video file name. 
+configure your path and server and run. it will scan the path for files, pull the youtubeid out and search elastic for the metadata and write it a file matching the video file name. 
