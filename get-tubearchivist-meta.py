@@ -6,9 +6,22 @@ from PIL import Image
 
 ##########################################################
 ### Set your file path!
+### Example
+
+# /data/media/emby/youtube 
+
 rootfile = "" 
 
 ### Set your server!
+### Example
+# username: elastic
+# password: password
+# server: 192.168.0.10
+# port:9200
+
+# Elasticsearch(['http://elastic:password@192.168.0.10:9200'])
+
+
 es = Elasticsearch()
 
 ##########################################################
