@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 # /data/media/emby/youtube 
 
-rootfile = "/Volumes/video/youtube" 
+rootfile = "/data" 
 
 ### Set your server!
 ### Example
