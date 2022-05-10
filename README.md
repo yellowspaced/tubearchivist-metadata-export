@@ -16,5 +16,15 @@ This script can be run with the following variables set:
 
 These values can be passed directly or provided by a `.env` file. To use the included one please `cp .env-example .env` and fill out your values in `.env`
 
+## Use with Docker
+
+Docker expects the following environment variables:
+
+- `ES_USERNAME` - a username for connecting to ElasticSearch (ex: `elastic`)
+- `ES_PASSWORD` - a password for connecting to ElasticSearch (ex: `verysecret`)
+- `ES_SERVER_ADDR` - a full address including port for ElasticSearch (ex: `192.168.7.221:9200`)
+
+Docker also expects a mount at `/data` with your video library.
+
 ## Usage:
 configure your path and server and run. it will scan the path for files, pull the youtubeid out and search elastic for the metadata and write it a file matching the video file name. 
