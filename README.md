@@ -6,6 +6,9 @@ My use case is to download youtube channels for my kids to watch via Emby. I am 
 
 Thank you to [bbilly1](https://github.com/bbilly1) for all the great work on TubeArchivist. 
 
+## Command line Usage:
+configure your path and server and run. it will scan the path for files, pull the youtubeid out and search elastic for the metadata and write it a file matching the video file name. 
+
 ## Use with environment variables
 
 This script can be run with the following variables set:
@@ -26,5 +29,4 @@ Docker expects the following environment variables:
 
 Docker also expects a mount at `/data` with your video library.
 
-## Usage:
-configure your path and server and run. it will scan the path for files, pull the youtubeid out and search elastic for the metadata and write it a file matching the video file name. 
+This script runs the command directly. You should call it via cron if you want it to run every-so-often.
