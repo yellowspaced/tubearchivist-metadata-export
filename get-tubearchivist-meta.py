@@ -27,7 +27,7 @@ espassword = os.environ.get('ES_PASSWORD') or "password"
 serveraddr = os.environ.get('ES_SERVER_ADDR') or "192.168.0.10:9200"
 
 esserveraddr = "http://" + esusername + ":" + espassword + "@" + serveraddr
-print(esserveraddr)
+print("connecting to: " + esserveraddr)
 
 es = Elasticsearch(esserveraddr)
 
