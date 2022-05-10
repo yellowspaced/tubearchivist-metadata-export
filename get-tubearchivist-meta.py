@@ -3,6 +3,7 @@ from elasticsearch import Elasticsearch
 import xml.etree.ElementTree as ET
 import requests
 from PIL import Image
+from dotenv import load_dotenv
 
 ##########################################################
 ### Set your file path!
@@ -10,7 +11,7 @@ from PIL import Image
 
 # /data/media/emby/youtube 
 
-rootfile = "" 
+rootfile = "/data" 
 
 ### Set your server!
 ### Example
@@ -22,7 +23,16 @@ rootfile = ""
 # Elasticsearch(['http://elastic:password@192.168.0.10:9200'])
 
 
-es = Elasticsearch()
+load_dotenv()
+
+esusername = os.environ.get('ES_USERNAME') or "elastic"
+espassword = os.environ.get('ES_PASSWORD') or "password"
+serveraddr = os.environ.get('ES_SERVER_ADDR') or "192.168.0.10:9200"
+
+esserveraddr = "http://" + esusername + ":" + espassword + "@" + serveraddr
+print("connecting to: " + esserveraddr)
+
+es = Elasticsearch(esserveraddr)
 
 ##########################################################
 
